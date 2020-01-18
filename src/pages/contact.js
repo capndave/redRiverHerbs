@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Layout from '../components/layout'
 
 const ContactPage = function () {
     return (
-        <div>
+        <Layout>
             <h1>Contact Me</h1>
             <p>Some contact info</p>
             <ul>
@@ -11,7 +12,7 @@ const ContactPage = function () {
                     <Link to='https://www.instagram.com/redriver.herbs/'>Instagram</Link>
                 </li>
             </ul>
-        </div>
+        </Layout>
     )
 }
 

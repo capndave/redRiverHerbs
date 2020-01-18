@@ -14,4 +14,4 @@ const Header = function() {
     )
 }
 
-export default Footer
+export default Header

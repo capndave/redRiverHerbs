@@ -1,12 +1,14 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import Layout from '../components/layout'
 
 const IndexPage = function() {
     return (
         <div>
-            <h1>Hi</h1>
-            <h2>My name is dave</h2>
-            <p>Need a developer? <Link to='/contact'>contact me.</Link></p>
+            <Layout>
+                <h1>Intro page</h1>
+                <p>some introcontent</p>
+            </Layout>
         </div>
     )
 }
