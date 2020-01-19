@@ -6,6 +6,12 @@
     color: #999999;
 }
 
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
 .title {
     color: #000000;
     font-size: 3rem;

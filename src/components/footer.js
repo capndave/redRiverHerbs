@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 const Footer = function() {
     return (
         <footer>
-            <p>Created by <Link to='davethompsonisme.com'>Dave Thompson</Link></p>
+            <p>Site by <Link to='davethompsonisme.com'>Dave</Link></p>
         </footer>
     )
 }
