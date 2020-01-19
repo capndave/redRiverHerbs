@@ -14,9 +14,9 @@ const Header = function () {
                 </Link>
             </h1>
             <div className={headerStyles.navList}>
-                <Link className={headerStyles.link} to='/about'>About</Link>
-                <Link className={headerStyles.link} to='/products'>Products</Link>
-                <Link className={headerStyles.link} to='/contact'>Contact</Link>
+                <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to='/about'>About</Link>
+                <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to='/products'>Products</Link>
+                <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to='/contact'>Contact</Link>
             </div>
         </header>
     )
