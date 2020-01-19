@@ -1,14 +1,22 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import headerStyles from './header.module.css'
 
-const Header = function() {
+const Header = function () {
     return (
-        <header>
-            <h1>Red River Herbs</h1>
+        <header className={headerStyles.header}>
+            <h1>
+                <Link
+                  className={headerStyles.title}
+                  to='/'>
+                  
+                    Red River Herbs
+                </Link>
+            </h1>
             <div>
-                <Link to='/about'>About</Link>
-                <Link to='/about'>Products</Link>
-                <Link to='/contact'>Contact</Link>
+                <Link className={headerStyles.link} to='/about'>About</Link>
+                <Link className={headerStyles.link} to='/about'>Products</Link>
+                <Link className={headerStyles.link} to='/contact'>Contact</Link>
             </div>
         </header>
     )
