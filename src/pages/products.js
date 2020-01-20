@@ -4,10 +4,9 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 import productsStyles from './products.module.css'
 
 const ProductsPage = function () {
-
     const productsData = useStaticQuery(graphql`
         query ContentPageQuery {
-            allContentfulProduct(sort: {fields: name, order: DESC}) {
+            allContentfulProduct(sort: {fields: name, order: ASC}) {
                 edges {
                     node {
                         description {
@@ -28,25 +27,29 @@ const ProductsPage = function () {
         }
     `)
 
-    console.log(productsData)
-    const products = productsData.allContentfulProduct.edges.map(edge => {
+    const products = productsData.allContentfulProduct.edges.map((edge, i) => {
         return (
-            <li className={productsStyles.product}>
-                <Link to={`/product/${edge.node.slug}`}>
-                    <h2>{edge.node.name}</h2>
-                    <p>{edge.node.shortDescription}</p>
+            <div
+                className={productsStyles.product}
+                key={i}
+            >
+                <Link
+                  className={productsStyles.textDecorationNone}
+                  to={`/product/${edge.node.slug}`}
+                >
+                    <h2 className={productsStyles.productTitle}>{edge.node.name}</h2>
+                    <p className={productsStyles.productDescription}>{edge.node.shortDescription}</p>
                 </Link>
-            </li>
+            </div>
         )
     })
 
     return (
         <Layout>
-            <h1>Products</h1>
-            <ol>
+            <h1 className='text-align-center'>Products</h1>
+            <div className={productsStyles.products}>
                 {products}
-            </ol>
-            <p>Products will be here</p>
+            </div>
         </Layout>
     )
 }

@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 const AboutPage = function() {
     return (
         <Layout>
-            <h1>About Me</h1>
+            <h1 className='text-align-center'>About Me</h1>
             <p>Some stuff about me</p>    
         </Layout>
     )

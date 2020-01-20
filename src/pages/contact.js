@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 const ContactPage = function () {
     return (
         <Layout>
-            <h1>Contact Me</h1>
+            <h1 className='text-align-center'>Contact Me</h1>
             <p>Some contact info</p>
             <ul>
                 <li>

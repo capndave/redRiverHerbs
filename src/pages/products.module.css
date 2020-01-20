@@ -1,3 +1,24 @@
 .product {
-  background-color: green;
+  background-color: #faf3f1;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.product-title {
+  margin-top: 0;
+}
+
+.product-description {
+  margin-bottom: 0;
+}
+
+.products {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between
+}
+
+.text-decoration-none {
+  text-decoration: none;
+  color: inherit;
 }
