@@ -9,9 +9,6 @@ const ProductsPage = function () {
             allContentfulProduct(sort: {fields: name, order: ASC}) {
                 edges {
                     node {
-                        description {
-                            description
-                        }
                         name
                         packages {
                             available

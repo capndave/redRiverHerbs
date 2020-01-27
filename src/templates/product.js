@@ -7,17 +7,24 @@ export const query = graphql`
         contentfulProduct(slug: {eq: $slug}) {
             name
             description {
-                description
+                childMarkdownRemark {
+                    html
+                }
             }
         }
     }
 `
 
 const Product = function (props) {
+    console.log(props.data.contentfulProduct.description)
     return (
         <Layout>
             <h1>{props.data.contentfulProduct.name}</h1>
-            <p>{props.data.contentfulProduct.description.description}</p>
+            <div
+              dangerouslySetInnerHTML={{
+                  __html: props.data.contentfulProduct.description.childMarkdownRemark.html
+              }}
+            />
         </Layout>
     )
 }

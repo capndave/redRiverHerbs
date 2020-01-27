@@ -1,11 +1,9 @@
 body {
     margin: 0;
+    font-family: montserrat, serif;
+    font-size: 20px;
 }
 
 .text-align-center {
     text-align: center;
-}
-
-.pink {
-    background-color: pink;
 }
