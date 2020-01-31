@@ -6,6 +6,12 @@ export const query = graphql`
     query($slug: String!) {
         contentfulProduct(slug: {eq: $slug}) {
             name
+            packages {
+                available
+                ounces
+                cost
+                type
+            }
             description {
                 childMarkdownRemark {
                     html
@@ -16,13 +22,23 @@ export const query = graphql`
 `
 
 const Product = function (props) {
-    console.log(props.data.contentfulProduct.description)
+    const data = props.data.contentfulProduct
+
+    const packages = data.packages.map(pkg => {
+        return (
+            <div className={ pkg.available ? '' : 'text-decoration-line-through' }>
+                { pkg.ounces } oz. { pkg.type }: ${ pkg.cost }
+            </div>
+        )
+    })
+
     return (
         <Layout>
-            <h1>{props.data.contentfulProduct.name}</h1>
+            <h1>{data.name}</h1>
+            { packages }
             <div
               dangerouslySetInnerHTML={{
-                  __html: props.data.contentfulProduct.description.childMarkdownRemark.html
+                  __html: data.description.childMarkdownRemark.html
               }}
             />
         </Layout>

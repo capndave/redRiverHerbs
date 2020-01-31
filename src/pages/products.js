@@ -10,12 +10,6 @@ const ProductsPage = function () {
                 edges {
                     node {
                         name
-                        packages {
-                            available
-                            cost
-                            type
-                            ounces
-                        }
                         shortDescription
                         slug
                     }
@@ -25,16 +19,18 @@ const ProductsPage = function () {
     `)
 
     const products = productsData.allContentfulProduct.edges.map((edge, i) => {
+
         return (
             <div
                 className={productsStyles.product}
                 key={i}
             >
                 <Link
-                  className={productsStyles.textDecorationNone}
-                  to={`/product/${edge.node.slug}`}
+                    className={productsStyles.textDecorationNone}
+                    to={`/product/${edge.node.slug}`}
                 >
                     <h2 className={productsStyles.productTitle}>{edge.node.name}</h2>
+                    {products}
                     <p className={productsStyles.productDescription}>{edge.node.shortDescription}</p>
                 </Link>
             </div>
