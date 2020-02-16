@@ -8,6 +8,7 @@ module.exports = {
     author: 'Dave Thompson'
   },
   plugins: [
+    'gatsby-plugin-netlify',
     {
       resolve: 'gatsby-source-contentful',
       options: {
@@ -19,7 +20,6 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
       }
-    },
-
+    }
   ]
 }

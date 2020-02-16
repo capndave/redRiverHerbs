@@ -22,6 +22,7 @@ export const query = graphql`
 `
 
 const Product = function (props) {
+
     const data = props.data.contentfulProduct
 
     const packages = data.packages.map(pkg => {

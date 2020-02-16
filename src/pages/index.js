@@ -1,14 +1,13 @@
 import React from 'react'
 import Layout from '../components/layout'
 
-const IndexPage = function() {
+const IndexPage = function () {
     return (
-        <div>
-            <Layout>
-                <h1>Intro page</h1>
-                <p>some introcontent</p>
-            </Layout>
-        </div>
+        <Layout>
+            <div>
+              Please navigate to About, Products, or Contact
+            </div>
+        </Layout>
     )
 }
 
