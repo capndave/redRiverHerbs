@@ -1,10 +1,9 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 const Footer = function() {
     return (
         <footer>
-            <p>Site by <Link to='davethompsonisme.com'>Dave</Link></p>
+            <p>Site by <a href='https://www.davethompsonisme.com'>Dave</a></p>
         </footer>
     )
 }
