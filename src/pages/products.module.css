@@ -13,9 +13,9 @@
 }
 
 .products {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat( auto-fit, minmax(270px, 1fr) );
 }
 
 .text-decoration-none {

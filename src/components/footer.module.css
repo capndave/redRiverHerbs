@@ -1,0 +1,13 @@
+.footer {
+    color: #d09489;
+    /* color: #c98376; */
+}
+
+.link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #B75A49;
+}
