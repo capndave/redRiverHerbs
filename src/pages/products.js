@@ -30,7 +30,6 @@ const ProductsPage = function () {
                     to={`/product/${edge.node.slug}`}
                 >
                     <h2 className={productsStyles.productTitle}>{edge.node.name}</h2>
-                    {products}
                     <p className={productsStyles.productDescription}>{edge.node.shortDescription}</p>
                 </Link>
             </div>
