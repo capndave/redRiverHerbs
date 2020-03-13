@@ -25,22 +25,24 @@ const Product = function (props) {
 
     const data = props.data.contentfulProduct
 
-    const packages = data.packages !== undefined ? data.packages.map(pkg => {
-        return (
-            <div className={ pkg.available ? '' : 'text-decoration-line-through' }>
-                { pkg.ounces } oz. { pkg.type }: ${ pkg.cost }
-            </div>
-        ) : return null
-    })
+    const packages = (data.packages !== undefined) ?
+        data.packages.map(pkg => {
+            return (
+                <div className={pkg.available ? '' : 'text-decoration-line-through'}>
+                    {pkg.ounces} oz. {pkg.type}: ${pkg.cost}
+                </div>
+            )
+        }) :
+        null
 
     return (
         <Layout>
             <h1>{data.name}</h1>
-            { packages }
+            {packages}
             <div
-              dangerouslySetInnerHTML={{
-                  __html: data.description.childMarkdownRemark.html
-              }}
+                dangerouslySetInnerHTML={{
+                    __html: data.description.childMarkdownRemark.html
+                }}
             />
         </Layout>
     )

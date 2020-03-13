@@ -4,6 +4,7 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 import productsStyles from './products.module.css'
 
 const ProductsPage = function () {
+
     const productsData = useStaticQuery(graphql`
         query ContentPageQuery {
             allContentfulProduct(sort: {fields: name, order: ASC}) {
