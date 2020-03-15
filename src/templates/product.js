@@ -6,6 +6,11 @@ export const query = graphql`
     query($slug: String!) {
         contentfulProduct(slug: {eq: $slug}) {
             ingredients
+            instructions {
+                childMarkdownRemark {
+                    html
+                }
+            }
             name
             packages {
                 available
@@ -31,6 +36,17 @@ const Product = function (props) {
             <b>Ingredients: </b>
             {data.ingredients.join(', ')}
         </div>): null
+    
+    const instructions = data.instructions ?
+        (<div>
+            <b>Instructions: </b>
+            <span
+                dangerouslySetInnerHTML={{
+                    __html: data.instructions.childMarkdownRemark.html
+                }}
+            />
+        </div>): null
+        
 
     const packages = (data.packages !== undefined) ?
         data.packages.map(pkg => {
@@ -52,6 +68,7 @@ const Product = function (props) {
                 }}
             />
             {ingredients}
+            {instructions}
         </Layout>
     )
 }
