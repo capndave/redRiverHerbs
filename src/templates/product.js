@@ -32,20 +32,20 @@ const Product = function (props) {
     const data = props.data.contentfulProduct
 
     const ingredients = data.ingredients ?
-        (<div>
+        (<p>
             <b>Ingredients: </b>
             {data.ingredients.join(', ')}
-        </div>): null
+        </p>): null
     
     const instructions = data.instructions ?
-        (<div>
+        (<p>
             <b>Instructions: </b>
             <span
                 dangerouslySetInnerHTML={{
                     __html: data.instructions.childMarkdownRemark.html
                 }}
             />
-        </div>): null
+        </p>): null
         
 
     const packages = (data.packages !== undefined) ?
