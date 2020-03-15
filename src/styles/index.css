@@ -4,6 +4,14 @@ body {
     font-size: 20px;
 }
 
+a {
+    color: rgb(180, 28, 2);
+}
+
+a:hover {
+    color: #b75a49; 
+}
+
 .text-align-center {
     text-align: center;
 }

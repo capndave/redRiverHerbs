@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 export const query = graphql`
     query($slug: String!) {
         contentfulProduct(slug: {eq: $slug}) {
+            ingredients
             name
             packages {
                 available
@@ -25,6 +26,12 @@ const Product = function (props) {
 
     const data = props.data.contentfulProduct
 
+    const ingredients = data.ingredients ?
+        (<div>
+            <b>Ingredients: </b>
+            {data.ingredients.join(', ')}
+        </div>): null
+
     const packages = (data.packages !== undefined) ?
         data.packages.map(pkg => {
             return (
@@ -44,6 +51,7 @@ const Product = function (props) {
                     __html: data.description.childMarkdownRemark.html
                 }}
             />
+            {ingredients}
         </Layout>
     )
 }
