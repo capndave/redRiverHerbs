@@ -7,7 +7,7 @@ const IndexPage = function () {
 
     const image = useStaticQuery(graphql`
     query MyQuery {
-        file(relativePath: { eq: "rocks-medium.jpg" }) {
+        file(relativePath: { eq: "background.jpg" }) {
             childImageSharp {
               fluid(quality: 80, maxWidth: 1920) {
                 ...GatsbyImageSharpFluid_withWebp
