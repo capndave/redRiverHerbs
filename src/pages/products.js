@@ -39,7 +39,6 @@ const ProductsPage = function () {
 
     return (
         <Layout>
-            <h1 className='text-align-center'>Products</h1>
             <div className={productsStyles.products}>
                 {products}
             </div>

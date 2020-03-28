@@ -24,7 +24,6 @@ const AboutPage = function () {
 
     return (
         <Layout>
-            <h1 className='text-align-center'>About Me</h1>
             <div
                 dangerouslySetInnerHTML={{
                     __html: aboutText

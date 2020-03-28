@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Layout from '../components/layout'
+import orderStyles from './order.module.css'
 
 const ContactPage = function () {
 
@@ -24,8 +25,8 @@ const ContactPage = function () {
 
     return (
         <Layout>
-            <h1 className='text-align-center'>Contact Me</h1>
             <div
+                className={orderStyles.order}
                 dangerouslySetInnerHTML={{
                     __html: contactText
                 }}

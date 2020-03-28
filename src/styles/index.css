@@ -4,12 +4,16 @@ body {
     font-size: 20px;
 }
 
-a {
-    color: rgb(180, 28, 2);
-}
-
 a:hover {
     color: #b75a49; 
+}
+
+.color-black {
+    color: black;
+}
+
+.color-white {
+    color: white;
 }
 
 .text-align-center {

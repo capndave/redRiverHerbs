@@ -9,6 +9,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-netlify',
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-source-contentful',
       options: {
@@ -17,9 +18,16 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/assets`
+      }
+    },
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
       }
-    }
+    },
+    'gatsby-transformer-sharp',
   ]
 }

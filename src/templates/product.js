@@ -33,10 +33,12 @@ const Product = function (props) {
 
     const ingredients = data.ingredients ?
         (<p>
-            <b>Ingredients: </b>
-            {data.ingredients.join(', ')}
-        </p>): null
-    
+            <p><b>Ingredients: </b></p>
+            <span>
+                {data.ingredients.join(', ')}
+            </span>
+        </p>) : null
+
     const instructions = data.instructions ?
         (<p>
             <b>Instructions: </b>
@@ -45,8 +47,8 @@ const Product = function (props) {
                     __html: data.instructions.childMarkdownRemark.html
                 }}
             />
-        </p>): null
-        
+        </p>) : null
+
 
     const packages = (data.packages !== undefined) ?
         data.packages.map(pkg => {
