@@ -10,24 +10,37 @@
     list-style-type: none;
 }
 
+.light {
+    color: var(--light-color);
+    opacity: 1;
+}
+
+.dark {
+    color: var(--dark-color);
+}
+
 .nav-item {
-    color: #999999;
     text-decoration: none;
+    opacity: var(--opacity);
 }
 
 .nav-item:hover {
-    color: #666666;
+    opacity: .7;
 }
 
 .active-nav-item {
-    color: #333333;
     font-size: 140%;
+    opacity: 1;
 }
 
 .title {
     font-family: calistoga;
     font-size: 3rem;
     text-decoration: none;
+}
+
+.title:hover {
+    opacity: .7;
 }
 
 @media only screen and (min-width: 500px) {

@@ -25,7 +25,7 @@ const IndexPage = function () {
             fluid={imageData}
         >
             <Layout 
-              titleColor="white"
+              headerTheme="light"
             />
         </BackgroundImage>
     )

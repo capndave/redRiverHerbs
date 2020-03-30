@@ -1,3 +1,10 @@
+:root {
+    --light-color: white;
+    --dark-color: black;
+    --mid-color: #999999;
+    --hover-color: #666666;
+}
+
 body {
     margin: 0;
     font-family: montserrat, serif;
@@ -5,15 +12,16 @@ body {
 }
 
 a:hover {
-    color: #b75a49; 
+    /* color: #b75a49;  */
+    /* color: var(--hover-color);  */
 }
 
-.color-black {
-    color: black;
+.color-dark {
+    color: var(--dark-color);
 }
 
-.color-white {
-    color: white;
+.color-light {
+    color: var(--light-color);
 }
 
 .text-align-center {

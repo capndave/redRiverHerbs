@@ -9,7 +9,7 @@ const Layout = function (props) {
         <div className={layoutStyles.container}>
             <div className={layoutStyles.content}>
                 <Header
-                  titleColor={props.titleColor}
+                  headerTheme={props.headerTheme}
                 />
                 {props.children}
             </div>
