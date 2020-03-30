@@ -1,27 +1,12 @@
 :root {
     --light-color: white;
     --dark-color: black;
-    --mid-color: #999999;
-    --hover-color: #666666;
 }
 
 body {
     margin: 0;
     font-family: montserrat, serif;
     font-size: 20px;
-}
-
-a:hover {
-    /* color: #b75a49;  */
-    /* color: var(--hover-color);  */
-}
-
-.color-dark {
-    color: var(--dark-color);
-}
-
-.color-light {
-    color: var(--light-color);
 }
 
 .text-align-center {

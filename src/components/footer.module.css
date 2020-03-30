@@ -1,7 +1,6 @@
 .footer {
-    /* color: #d09489; */
-    /* color: #c98376; */
-    color: #999999;
+    color: var(--color);
+    opacity: var(--opacity);
 }
 
 .link {
@@ -10,6 +9,5 @@
 }
 
 .link:hover {
-    /* color: #B75A49; */
-    color: #666666;
+    opacity: 7;
 }

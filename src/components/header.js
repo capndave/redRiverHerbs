@@ -15,16 +15,25 @@ const Header = function ({ headerTheme = 'dark' }) {
             </h1>
             <h3
                 className={headerStyles.navList}
-                style={{ '--opacity': `${headerTheme === 'dark' ? '.5' : '1'}` }}
             >
                 <Link
                     activeClassName={`${headerStyles.activeNavItem}`}
-                    className={`${headerStyles.navItem} ${headerStyles[headerTheme]}`}
+                    className={headerStyles.navItem}
                     to='/about'>
                     About
                 </Link>
-                <Link className={`${headerStyles.navItem} ${headerStyles[headerTheme]}`} activeClassName={headerStyles.activeNavItem} to='/products'>Products</Link>
-                <Link className={`${headerStyles.navItem} ${headerStyles[headerTheme]}`} activeClassName={headerStyles.activeNavItem} to='/order'>Order</Link>
+                <Link
+                    className={headerStyles.navItem}
+                    activeClassName={headerStyles.activeNavItem}
+                    to='/products'>
+                    Products
+                </Link>
+                <Link
+                    className={headerStyles.navItem}
+                    activeClassName={headerStyles.activeNavItem}
+                    to='/order'>
+                    Order
+                </Link>
             </h3>
         </header>
     )

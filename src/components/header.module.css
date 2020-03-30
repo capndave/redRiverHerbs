@@ -10,18 +10,10 @@
     list-style-type: none;
 }
 
-.light {
-    color: var(--light-color);
-    opacity: 1;
-}
-
-.dark {
-    color: var(--dark-color);
-}
-
 .nav-item {
     text-decoration: none;
     opacity: var(--opacity);
+    color: var(--color);
 }
 
 .nav-item:hover {
@@ -34,6 +26,7 @@
 }
 
 .title {
+    color: var(--color);
     font-family: calistoga;
     font-size: 3rem;
     text-decoration: none;
