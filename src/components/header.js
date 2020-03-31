@@ -4,6 +4,11 @@ import headerStyles from './header.module.css'
 
 const Header = function ({ headerTheme = 'dark' }) {
 
+    const getPropsHandler = (ps) => {
+        console.log('inside getPropsHandler')
+        console.log(ps)
+    }
+
     return (
         <header className={headerStyles.header}>
             <h1>
@@ -17,8 +22,8 @@ const Header = function ({ headerTheme = 'dark' }) {
                 className={headerStyles.navList}
             >
                 <Link
-                    activeClassName={`${headerStyles.activeNavItem}`}
                     className={headerStyles.navItem}
+                    activeClassName={headerStyles.activeNavItem}
                     to='/about'>
                     About
                 </Link>
