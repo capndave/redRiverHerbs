@@ -7,7 +7,11 @@ const Footer = function () {
             className={footerStyles.footer} 
         >
             <p>
+                <span
+                  className={footerStyles.semiTransparent}
+                >
                 Site by&nbsp;
+                </span>
                <a
                     className={footerStyles.link}
                     href='https://www.davethompsonisme.com'

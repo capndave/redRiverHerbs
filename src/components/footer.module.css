@@ -1,13 +1,17 @@
 .footer {
     color: var(--color);
-    opacity: var(--opacity);
 }
 
 .link {
     color: inherit;
     text-decoration: none;
+    opacity: .7;
 }
 
 .link:hover {
-    opacity: 7;
+    opacity: 1;
+}
+
+.semi-transparent {
+    opacity: .5;
 }
